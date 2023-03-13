@@ -1,0 +1,233 @@
+,,,Zad´an´ı 1. ´ukolu do pˇredmˇetu IZU,,,,,,,,,,,
+Jm´eno: Kuchaˇr Josef,,,,,,,,,,,,,,
+Login: xkucha28,,,,,,,,,,,,,,
+Pomoc´ı,metody,A*,najdˇete,nejkratˇs´ı,cestu,v,mapˇe,sloˇzen´e z,pravideln´ych,"bunˇek,",kde,cena,pˇrechodu,mezi
+"dvˇema stavy (buˇnkami) je d´ana ˇc´ıslem, uveden´ym v Tabulce 1 (a je stejn´a pro vˇsechny pˇrechody ze sousedn´ıch",,,,,,,,,,,,,,
+m´ıst do pˇr´ısluˇsn´e buˇnky). Nepˇrekroˇciteln´e buˇnky maj´ı hodnotu ”Z”(jako ”zed’”). Po kaˇzd´em kroku vypiˇste nov´e,,,,,,,,,,,,,,
+"hodnoty seznam˚u Open a Closed. Do pomocn´e tabulky s ohodnocen´ım uzl˚u zapisujte aktu´alnˇe zkouman´y uzel,",,,,,,,,,,,,,,
+cenu cesty do aktu´aln´ıho uzlu,,,,"g“, heuristiku",,,h“,a celkovou cenu cesty,f“. Heuristiku poˇc´ıtejte jako pˇr´ımou,,,,,
+,,,,”,,”,,,”,,,,,
+"vzd´alenost stˇred˚u dvou bunˇek, kde velikost strany jedn´e buˇnky je rovna jedn´e. Uzly generujte v poˇrad´ı zleva",,,,,,,,,,,,,,
+"doprava a shora dol˚u, uvaˇzujte 8-okol´ı buˇnky (tzn. oper´atory տ, ↑,ր,←,→,ւ, ↓,ց). V´yslednou cestu zapiˇste",,,,,,,,,,,,,,
+"do tabulky V´ysledn´a cesta. Uzel se skl´ad´a ze souˇradnic, z ohodnocen´ı f a souˇradnic uzlu, ze kter´eho byl vyge-",,,,,,,,,,,,,,
+"nerov´an nebo z oper´atoru, kter´y byl pouˇzit (aby bylo moˇzn´e nal´ezt cestu od startu k c´ıli).",,,,,,,,,,,,,,
+"Uzly zapisujte: ([sloupec, ˇr´adek], celkov´e ohodnocen´ı f, [souˇradnice otcovsk´eho uzlu nebo oper´ator])",,,,,,,,,,,,,,
+"Start: ([2, 4], 5.0, [null])",,,,,,,,,,,,,,
+"C´ıl: ([6, 7], X, [?, ?])",,,,,,,,,,,,,,
+V´ysledn´a cesta:,,,,,,,,,,,,,,
+"[2, 4]",,,,,,,,,,,,,,
+
+
+
+,,,y/x,0,1,2,3,4,5,6,7,8,9,
+,,,0,8,8,8,8,Z,9,7,7,8,9,
+,,,1,8,8,6,7,Z,9,9,9,9,9,
+,,,2,9,9,9,9,Z,9,9,9,9,9,
+,,,3,9,Z,Z,Z,Z,Z,Z,Z,9,7,
+,,,4,9,Z,2,6,Z,8,9,9,9,6,
+,,,5,9,Z,5,4,Z,3,3,3,3,3,
+,,,6,3,3,3,3,3,9,4,7,9,7,
+,,,7,9,9,8,8,Z,9,2,8,8,9,
+,,,8,6,6,5,7,Z,Z,Z,Z,7,8,
+,,,9,7,7,7,5,Z,8,7,8,7,9,
+Tabulka 1: Mapa pˇrechod˚u. Napˇr. cena pˇrechodu do c´ılov´e buˇnky je rovna 2 pro vˇsechny buˇnky s c´ılovou buˇnkou,,,,,,,,,,,,,,
+soused´ıc´ı.,,,,,,,,,,,,,,
+Pomocn´a tabulka:,,,,,,,,,
+,Uzel,g,h,f,,Uzel,g,h,f
+1,"[2, 4]",0,5,5,16,,,,
+2,,,,,17,,,,
+3,,,,,18,,,,
+4,,,,,19,,,,
+5,,,,,20,,,,
+6,,,,,21,,,,
+7,,,,,22,,,,
+8,,,,,23,,,,
+9,,,,,24,,,,
+10,,,,,25,,,,
+11,,,,,26,,,,
+12,,,,,27,,,,
+13,,,,,28,,,,
+14,,,,,29,,,,
+15,,,,,30,,,,
+1. iterace,,,,,,,,,
+Open:,,,,,,,,,
+"[2, 4], 5.0, NULL",,,,,,,,,
+
+
+
+Closed:,,,,,,,,,
+
+
+
+
+2. iterace,,,,,,,,,
+Open:,,,,,,,,,
+
+
+
+
+Closed:,,,,,,,,,
+
+
+
+
+,,,,2,,,,,
+3. iterace,,,,
+Open:,,,,
+
+
+
+
+Closed:,,,,
+
+
+
+
+4. iterace,,,,
+Open:,,,,
+
+
+
+
+Closed:,,,,
+
+
+
+
+5. iterace,,,,
+Open:,,,,
+
+
+
+
+Closed:,,,,
+
+
+
+
+6. iterace,,,,
+,,3,,
+Open:,,,,
+
+
+
+
+Closed:,,,,
+
+
+
+
+7. iterace,,,,
+Open:,,,,
+
+
+
+
+Closed:,,,,
+
+
+
+
+8. iterace,,,,
+Open:,,,,
+
+
+
+
+Closed:,,,,
+
+
+
+
+9. iterace,,,,
+Open:,,,,
+,,4,,
+
+
+
+
+Closed:,,,,
+
+
+
+
+10. iterace,,,,
+Open:,,,,
+
+
+
+
+Closed:,,,,
+
+
+
+
+11. iterace,,,,
+Open:,,,,
+
+
+
+
+Closed:,,,,
+
+
+
+
+12. iterace,,,,
+Open:,,,,
+,,5,,
+
+
+
+
+Closed:,,,,
+
+
+
+
+13. iterace,,,,
+Open:,,,,
+
+
+
+
+Closed:,,,,
+
+
+
+
+14. iterace,,,,
+Open:,,,,
+
+
+
+
+Closed:,,,,
+
+
+
+
+15. iterace,,,,
+Open:,,,,
+,,6,,
+
+
+
+
+Closed:,,,,
+
+
+
+
+16. iterace,,,,
+Open:,,,,
+
+
+
+
+Closed:,,,,
+
+
+
+
+,,7,,
