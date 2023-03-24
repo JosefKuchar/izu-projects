@@ -16,7 +16,7 @@ prochazkach je nasledujici (zkratkami rew jsou oznaceny odmeny/rewards):
   0.342  0.079 -0.024 -0.098 -0.112
 
 Metodou TD-learning s koeficienty alpha=0.1 a gamma=0.9 vypocitejte nova
-ohodnoceni vsech stavu po prochazce stavy  1 2 3 .....
+ohodnoceni vsech stavu po prochazce stavy  1 2 7 12 17 18 19 14 15 10 9
 a vysledek zapiste na radcich c. 26, 27, 28 a 29 ve formatu stejnem jako
 vyse, tj. ve tvaru matice s cisly zaokrouhlenymi na tri desetinna mista.
 Oznaceni stavu s odmenami ponechejte v puvodnich tvarech!
